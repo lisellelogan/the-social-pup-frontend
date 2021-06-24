@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 let store = createStore(rootReducer)
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
