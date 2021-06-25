@@ -1,7 +1,8 @@
-import React from 'react';
-
-const rootReducer = () => {
-    console.log("we're in here!")
+const rootReducer = (state={name: 'beemo'}, action) => {
+    switch(action.type){
+        default:
+            return state
+    }
 }
 
-export default rootReducer
+export default rootReducer;
