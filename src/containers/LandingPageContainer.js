@@ -6,6 +6,7 @@ class LandingPageContainer extends Component {
         return(
             <div>
                 <h1>Welcome to The Social Pup! We are in the landing page container!</h1>
+                <h2>Let's be friends!</h2>
                 <NavBarLanding />
             </div>
         )
