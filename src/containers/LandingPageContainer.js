@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../components/NavBar';
 import { Switch, Route } from 'react-router-dom';
 import LogInForm from '../components/LogInForm';
+import SignUpForm from '../components/SignUpForm';
 
 class LandingPageContainer extends Component {
     render(){
