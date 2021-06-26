@@ -1,8 +1,8 @@
-const rootReducer = (state={logged_in: false, users: [], friends: []}, action) => {
-    switch(action.type){
-        default:
-            return state
-    }
-}
+import { combineReducers } from "redux";
+import usersReducer from "./usersReducer";
 
-export default rootReducer;
+const rootReducer = combineReducers({
+    usersReducer
+})
+
+export default rootReducer
