@@ -24,18 +24,20 @@ class SignUpForm extends Component {
 
     render(){
         return(
-            <form>
-                <label>Email: </label> <input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} placeholder="email@email.com"/><br/>
-                <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} /><br/>
-                <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} /><br/> 
-                <label>Pup Age: </label> <input onChange={this.handleOnChange} type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
-                <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} /><br/> 
-                <label>Pup Fully Vaccinated? </label><br/>
-                Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
-                No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" />
-                <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} /><br/>
-                <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" />
-            </form>
+            <div> 
+                <form>
+                    <label>Email: </label> <input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} placeholder="email@email.com"/><br/>
+                    <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} /><br/>
+                    <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} /><br/> 
+                    <label>Pup Age: </label> <input onChange={this.handleOnChange} type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
+                    <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} /><br/> 
+                    <label>Pup Fully Vaccinated? </label><br/>
+                    Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
+                    No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" /><br />
+                    <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} /><br/>
+                    <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" />
+                </form>
+            </div>
         )
     }
 }
