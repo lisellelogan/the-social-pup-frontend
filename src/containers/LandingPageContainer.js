@@ -11,10 +11,8 @@ class LandingPageContainer extends Component {
                 <h1>Welcome to The Social Pup! We are in the landing page container!</h1>
                 <h2>Let's be friends!</h2>
                 <NavBar />
-
                 <Switch>
                     <Route path="/login" exact component={LogInForm} />
-
                     <Route path="/signup" exact component={SignUpForm} />
                 </Switch>
             </div>
