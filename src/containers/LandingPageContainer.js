@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import NavBarLanding from '../components/NavBarLanding';
+import NavBar from '../components/NavBar';
+import { Link, Switch, Route } from 'react-router-dom';
 
 class LandingPageContainer extends Component {
     render(){
@@ -7,7 +8,17 @@ class LandingPageContainer extends Component {
             <div>
                 <h1>Welcome to The Social Pup! We are in the landing page container!</h1>
                 <h2>Let's be friends!</h2>
-                <NavBarLanding />
+                <NavBar />
+
+                <Switch>
+                    <Route path="/login">
+                        <p>Login Form</p>
+                    </Route>
+
+                    <Route path="/signup">
+                        <p>Signup Form</p>
+                    </Route>
+                </Switch>
             </div>
         )
     }
