@@ -4,6 +4,11 @@ import Users from '../components/Users';
 import { fetchUsers } from '../actions/UserActions';
 
 class UsersContainer extends Component {
+
+    componentDidMount(){
+        this.props.fetchUsers()
+    }
+
     render(){
         return(
             <div>
@@ -22,7 +27,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setUsers: (users) => dispatch(fetchUsers(users))
+        fetchUsers: () => dispatch(fetchUsers())
     }
 }
 

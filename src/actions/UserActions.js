@@ -1,6 +1,6 @@
 const url = "http://127.0.0.1:3001/users"
 
-export const setUsers = (users) => dispatch({type: "GOT_USERS", payload: users})
+export const setUsers = (users) => ({type: "GOT_USERS", payload: users})
 
 export const fetchUsers = () => {
     return (dispatch) => {
