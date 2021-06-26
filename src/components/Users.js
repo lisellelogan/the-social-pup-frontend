@@ -1,12 +1,14 @@
 import React from 'react';
+import User from './User';
 
 const Users = (props) => {
-    console.log(props)
-
+    const users = props.users.map(
+        user => <User key={user.id} user={user} />
+    )
     return(
-        <div>
-            we're here!
-        </div>
+        <ul>
+            {users}
+        </ul>
     )
 }
 
