@@ -4,7 +4,7 @@ export default function usersReducer(state={logged_in: false, users: [], friends
             return {
                 ...state,
                 logged_in: true,
-                users: state.users,
+                users: action.payload,
                 friends: []
             }
         default:
