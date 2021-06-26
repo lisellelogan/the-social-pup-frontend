@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Users = () => {
+const Users = (props) => {
+    console.log(props)
+
     return(
-        <div>Hello in Users!</div>
+        <div>
+            we're here!
+        </div>
     )
 }
 
