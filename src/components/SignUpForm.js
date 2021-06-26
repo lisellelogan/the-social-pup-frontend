@@ -14,10 +14,18 @@ class SignUpForm extends Component {
         picture: ""
     }
 
+    handleOnChange = event => {
+        const name = event.target.name
+        const value = event.target.value
+        this.setState({
+            [name]: value
+        })
+    }
+
     render(){
         return(
             <form>
-                <label>Email: </label> <input type="text" name="email" value={this.state.email} placeholder="email@email.com"/><br/>
+                <label>Email: </label> <input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} placeholder="email@email.com"/><br/>
                 <label>Password: </label> <input type="text" name="password" value={this.state.password} /><br/>
                 <label>Pup Name: </label> <input type="text"name="pupName" value={this.state.pupName} /><br/> 
                 <label>Pup Age: </label> <input type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
