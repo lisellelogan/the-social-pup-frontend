@@ -10,7 +10,9 @@ export default class App extends Component {
     return(
       <>
       <Switch>
-        <Route path ="/" exact component={LandingPageContainer} />
+        <Route path ="/">
+            <LandingPageContainer />
+        </Route>
         <Route path="/users" exact component={UsersContainer} />
       </Switch>
       </>
