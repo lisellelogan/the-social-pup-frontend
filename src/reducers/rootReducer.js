@@ -1,4 +1,4 @@
-const rootReducer = (state={name: 'beemo'}, action) => {
+const rootReducer = (state={logged_in: false, users: [], friends: []}, action) => {
     switch(action.type){
         default:
             return state
