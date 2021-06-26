@@ -2,7 +2,6 @@ import React from 'react';
 
 const User = (props) => {
     const user = props.user.attributes
-    console.log(user)
     return(
         <li>
             <img src={user.picture} alt={user.picture}/>
