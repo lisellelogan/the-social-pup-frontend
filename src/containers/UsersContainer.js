@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Users from '../components/Users';
+import { fetchUsers } from '../actions/UserActions';
 
 class UsersContainer extends Component {
     render(){
@@ -19,4 +20,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(UsersContainer);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setUsers: (users) => dispatch(fetchUsers(users))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
