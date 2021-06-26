@@ -13,16 +13,14 @@ class UsersContainer extends Component {
         return(
             <div>
                 <h2>Users Container</h2>
-                <Users />
+                <Users users={this.props.users} />
             </div>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    return {
-        users: state.users
-    }
+    debugger
 }
 
 const mapDispatchToProps = (dispatch) => {
