@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from '../components/NavBar';
 import { Switch, Route } from 'react-router-dom';
-import LoginForm from '../components/LoginForm';
+import LogInForm from '../components/LogInForm';
 
 class LandingPageContainer extends Component {
     render(){
@@ -12,11 +12,9 @@ class LandingPageContainer extends Component {
                 <NavBar />
 
                 <Switch>
-                    <Route path="/login" exact component={LoginForm} />
+                    <Route path="/login" exact component={LogInForm} />
 
-                    <Route path="/signup">
-                        <p>Signup Form</p>
-                    </Route>
+                    <Route path="/signup" exact component={SignUpForm} />
                 </Switch>
             </div>
         )
