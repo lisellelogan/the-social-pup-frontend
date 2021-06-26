@@ -5,25 +5,26 @@ class SignUpForm extends Component {
     state = {
         email: "",
         password: "",
-        pup_name: "",
-        pup_age: "",
-        pup_breed: "",
-        pup_fully_vaccinated: false,
-        pup_personality: "",
-        owner_name: "",
+        pupName: "",
+        pupAge: "",
+        pupBreed: "",
+        pupFullyVaccinated: false,
+        pupPersonality: "",
+        ownerName: "",
         picture: ""
     }
 
     render(){
         return(
             <form>
-                <input type="text" name="email" value={this.state.email}/>
-                <input type="text" name="password" value={this.state.password} />
-                <input type="text"name="pup_name" value{this} />
-                <input />
-                <input />
-                <input />
-                <input />
+                <label>Email: </label> <input type="text" name="email" value={this.state.email}/><br/>
+                <label>Password: </label> <input type="text" name="password" value={this.state.password} /><br/>
+                <label>Pup Name: </label> <input type="text"name="pupName" value={this.state.pupName} /><br/> 
+                <label>Pup Age: </label> <input type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
+                <label>Pup Breed: </label><input type="text" name="pupBreed" value={this.state.pupBreed} /><br/> 
+                <label>Pup Fully Vaccinated? </label><br/>
+                Yes: <input type="checkbox" name="pupIsFullyVaccinated"/>
+                No: <input type="checkbox" name="pupIsNotFullyVaccinated"/>
                 <input />
                 <input />
             </form>
