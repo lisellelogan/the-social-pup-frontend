@@ -12,6 +12,7 @@ class SignUpForm extends Component {
         pupBreed: "",
         pupFullyVaccinated: false,
         pupPersonality: "",
+        pupLocation: "",
         ownerName: "",
         picture: ""
     }
@@ -37,6 +38,7 @@ class SignUpForm extends Component {
             pupBreed: "",
             pupFullyVaccinated: false,
             pupPersonality: "",
+            pupLocation: "",
             ownerName: "",
             picture: ""
         })
@@ -56,6 +58,8 @@ class SignUpForm extends Component {
                     Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
                     No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" /><br />
                     <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} /><br/>
+                    <label>Pup Location: </label> <input onChange={this.handleOnChange} type="text" name="pupLocation" value={this.state.pupLocation} placeholder="ex. New York, NY"/><br/>
+                    <label>Owner Name: </label> <input onChange={this.handleOnChange} type="text" name="ownerName" value={this.ownerName} /><br/>
                     <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" /><br/>
                     <input type="submit" />
                 </form>
