@@ -30,7 +30,7 @@ class SignUpForm extends Component {
                     <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} /><br/>
                     <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} /><br/> 
                     <label>Pup Age: </label> <input onChange={this.handleOnChange} type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
-                    <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} /><br/> 
+                    <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} placeholder="ex. Corgi, Beagle, Terrier" /><br/> 
                     <label>Pup Fully Vaccinated? </label><br/>
                     Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
                     No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" /><br />
