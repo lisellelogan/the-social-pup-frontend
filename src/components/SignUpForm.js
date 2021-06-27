@@ -24,7 +24,19 @@ class SignUpForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        console.log(event)
+        // dispatch action to update store
+        //clear form
+        this.setState({
+            email: "",
+            password: "",
+            pupName: "",
+            pupAge: "",
+            pupBreed: "",
+            pupFullyVaccinated: false,
+            pupPersonality: "",
+            ownerName: "",
+            picture: ""
+        })
     }
 
     render(){
