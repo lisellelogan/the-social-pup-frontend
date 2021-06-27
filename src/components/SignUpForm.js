@@ -22,10 +22,15 @@ class SignUpForm extends Component {
         })
     }
 
+    handleOnSubmit = event => {
+        event.preventDefault()
+        console.log(event)
+    }
+
     render(){
         return(
             <div> 
-                <form>
+                <form onSubmit={this.handleOnSubmit}>
                     <label>Email: </label> <input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} placeholder="email@email.com"/><br/>
                     <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} /><br/>
                     <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} /><br/> 
