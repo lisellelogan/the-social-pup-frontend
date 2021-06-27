@@ -19,7 +19,7 @@ export const createUser = (user) => {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"
+                "Accepts": "application/json"
             },
             body: JSON.stringify(user)
         }
@@ -27,7 +27,7 @@ export const createUser = (user) => {
         fetch(url, configObj)
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
+            debugger
 
         })
     }

@@ -50,16 +50,16 @@ class SignUpForm extends Component {
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Email: </label> <input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} placeholder="email@email.com"/><br/>
                     <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} /><br/>
-                    <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pup_name" value={this.state.pupName} /><br/> 
+                    <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} /><br/> 
                     {/* ask about implementing years old or months old or if i should just change data type to string in backend */}
-                    <label>Pup Age: </label> <input onChange={this.handleOnChange} type="integer" name="pup_age" value={this.state.pupAge} /><br/> 
-                    <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pup_breed" value={this.state.pupBreed} placeholder="ex. Corgi, Beagle, Terrier" /><br/> 
+                    <label>Pup Age: </label> <input onChange={this.handleOnChange} type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
+                    <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} placeholder="ex. Corgi, Beagle, Terrier" /><br/> 
                     <label>Pup Fully Vaccinated? </label><br/>
-                    Yes: <input onChange={this.handleOnChange} type="radio" name="pup_fully_vaccinated" value="Yes" />
-                    No: <input onChange={this.handleOnChange} type="radio" name="pup_fully_vaccinated" value="No" /><br />
-                    <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pup_personality" value={this.state.pupPersonality} /><br/>
-                    <label>Pup Location: </label> <input onChange={this.handleOnChange} type="text" name="pup_location" value={this.state.pupLocation} placeholder="ex. New York, NY"/><br/>
-                    <label>Owner Name: </label> <input onChange={this.handleOnChange} type="text" name="owner_name" value={this.ownerName} /><br/>
+                    Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
+                    No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" /><br />
+                    <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} /><br/>
+                    <label>Pup Location: </label> <input onChange={this.handleOnChange} type="text" name="pupLocation" value={this.state.pupLocation} placeholder="ex. New York, NY"/><br/>
+                    <label>Owner Name: </label> <input onChange={this.handleOnChange} type="text" name="ownerName" value={this.ownerName} /><br/>
                     <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" /><br/>
                     <input type="submit" />
                 </form>
