@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { createUser } from "../actions/UserActions";
+import { connect } from 'react-redux';
 
 class SignUpForm extends Component {
 
@@ -25,6 +27,7 @@ class SignUpForm extends Component {
     handleOnSubmit = event => {
         event.preventDefault()
         // dispatch action to update store
+        this.props.createUser(this.state)
         //clear form
         this.setState({
             email: "",
@@ -53,11 +56,12 @@ class SignUpForm extends Component {
                     Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
                     No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" /><br />
                     <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} /><br/>
-                    <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" />
+                    <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" /><br/>
+                    <input type="submit" />
                 </form>
             </div>
         )
     }
 }
 
-export default SignUpForm;
+export default connect(null, { createUser })(SignUpForm);
