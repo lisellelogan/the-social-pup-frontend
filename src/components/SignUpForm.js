@@ -52,7 +52,7 @@ class SignUpForm extends Component {
                     <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} /><br/>
                     <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} /><br/> 
                     {/* ask about implementing years old or months old or if i should just change data type to string in backend */}
-                    <label>Pup Age: </label> <input onChange={this.handleOnChange} type="integer" name="pupAge" value={this.state.pupAge} /><br/> 
+                    <label>Pup Age: </label> <input onChange={this.handleOnChange} type="number" name="pupAge" value={this.state.pupAge} /><br/> 
                     <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} placeholder="ex. Corgi, Beagle, Terrier" /><br/> 
                     <label>Pup Fully Vaccinated? </label><br/>
                     Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
