@@ -28,6 +28,17 @@ class SignUpForm extends Component {
     handleOnSubmit = event => {
         event.preventDefault()
         // dispatch action to update store
+        if (this.state.pupFullyVaccinated.toLowerCase() === "no"){
+            this.setState({
+                ...this.state,
+                pupFullyVaccinated: false
+            })
+        } else {
+            this.setState({
+                ...this.state,
+                pupFullyVaccinated: true
+            })
+        }
         this.props.createUser(this.state)
         //clear form
         this.setState({
@@ -55,8 +66,8 @@ class SignUpForm extends Component {
                     <label>Pup Age: </label> <input onChange={this.handleOnChange} type="number" name="pupAge" value={this.state.pupAge} /><br/> 
                     <label>Pup Breed: </label><input onChange={this.handleOnChange} type="text" name="pupBreed" value={this.state.pupBreed} placeholder="ex. Corgi, Beagle, Terrier" /><br/> 
                     <label>Pup Fully Vaccinated? </label><br/>
-                    Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="Yes" />
-                    No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="No" /><br />
+                    Yes: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value={this.state.pupFullyVaccinated} />
+                    No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value={this.state.pupFullyVaccinated} /><br />
                     <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} /><br/>
                     <label>Pup Location: </label> <input onChange={this.handleOnChange} type="text" name="pupLocation" value={this.state.pupLocation} placeholder="ex. New York, NY"/><br/>
                     <label>Owner Name: </label> <input onChange={this.handleOnChange} type="text" name="ownerName" value={this.ownerName} /><br/>
