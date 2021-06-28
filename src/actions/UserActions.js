@@ -15,8 +15,6 @@ export const fetchUsers = () => {
 
 export const createUser = (user) => {
 
-    debugger
-
     // if (user.pup_fully_vaccinated.toLowerCase() === "no"){
     //     return false 
     // } else {
@@ -31,10 +29,10 @@ export const createUser = (user) => {
             pup_name: user.pupName,
             pup_age: user.pupAge,
             pup_breed: user.pupBreed,
-            pup_fully_vaccinated: user.pup_fully_vaccinated,
-            pupPersonality: user.pupPersonality,
-            pupLocation: user.pupLocation,
-            ownerName: user.ownerName,
+            pup_fully_vaccinated: (user.pupFullyVaccinated === "yes" ? true : false),
+            pup_personality: user.pupPersonality,
+            pup_location: user.pupLocation,
+            owner_name: user.ownerName,
             picture: user.picture
         }
 
