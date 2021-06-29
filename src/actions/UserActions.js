@@ -13,13 +13,9 @@ export const fetchUsers = () => {
     }
 }
 
-export const createUser = (user) => {
+const addUser = (user) => ({type: "ADD_USER", payload: user})
 
-    // if (user.pup_fully_vaccinated.toLowerCase() === "no"){
-    //     return false 
-    // } else {
-    //     return true
-    // }
+export const createUser = (user) => {
 
     return (dispatch) => {
 
@@ -48,7 +44,8 @@ export const createUser = (user) => {
         fetch(url, configObj)
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
+            const user = data.data
+            dispatch(addUser(user))
         })
     }
 }
