@@ -5,7 +5,8 @@ class LoginForm extends Component {
         return(
             <form>
                 <label>Email: </label><input type="text" name="email" /><br/>
-                <label>Password: </label><input type="text" name="password" />
+                <label>Password: </label><input type="text" name="password" /><br/>
+                <input type="submit" value="Login" />
             </form>
         )
     }
