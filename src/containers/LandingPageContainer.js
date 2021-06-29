@@ -14,7 +14,6 @@ class LandingPageContainer extends Component {
                 <Switch>
                     <Route path="/login" exact component={LogInForm} />
                     <Route path="/signup" exact component={SignUpForm} >
-                        <SignUpForm />
                     </Route>
                 </Switch>
             </div>
