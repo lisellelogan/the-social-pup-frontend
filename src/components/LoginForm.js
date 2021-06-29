@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+//what do i want to do?
+// find or create by user email
+// if successful change state to logged_in: true
+// else state logged_in: false
+
 class LoginForm extends Component {
     render(){
         return(
