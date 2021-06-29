@@ -4,8 +4,8 @@ class LoginForm extends Component {
     render(){
         return(
             <form>
-                <input type="text" name="email" />
-                <input type="text" name="password" />
+                <label>Email: </label><input type="text" name="email" /><br/>
+                <label>Password: </label><input type="text" name="password" />
             </form>
         )
     }
