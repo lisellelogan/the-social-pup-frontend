@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class LoginForm extends Component {
     render(){
         return(
-            <h1>Login Form</h1>
+            <form>
+                <input type="text" name="email" />
+                <input type="text" name="password" />
+            </form>
         )
     }
 }
