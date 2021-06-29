@@ -10,6 +10,7 @@ const User = (props) => {
             Pup Breed: {user.pup_breed}<br/>
             Pup Fully Vaccinated: {user.pup_fully_vaccinated ? "Yes" : "No"}<br/>
             Pup Personality: {user.pup_personality}<br/>
+            Pup Location: {user.pup_location}<br/>
             Owner Name: {user.owner_name}<br/>
             Email: {user.email}<br/><br/>
         </li>
