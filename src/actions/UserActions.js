@@ -13,7 +13,7 @@ export const fetchUsers = () => {
     }
 }
 
-const addUser = (user) => ({type: "ADD_USER", payload: user})
+const addUser = (user) => ({type: "ADDED_USER", payload: user})
 
 export const createUser = (user) => {
 
