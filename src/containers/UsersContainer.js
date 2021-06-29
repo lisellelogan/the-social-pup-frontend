@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Users from '../components/Users';
-import SignUpForm from '../components/SignUpForm';
 import { fetchUsers } from '../actions/UserActions';
 
 class UsersContainer extends Component {
@@ -14,7 +13,6 @@ class UsersContainer extends Component {
         return(
             <div>
                 <h2>Users Container</h2>
-                <SignUpForm />
                 <Users users={this.props.users}/>
             </div>
         )
