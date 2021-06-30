@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {Login} from '../actions/CurrentUserActions';
 
 //what do i want to do?
 // find or create by user email
@@ -18,4 +20,4 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm;
+export default connect(null, {Login})(LoginForm);
