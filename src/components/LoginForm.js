@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { Login } from '../actions/CurrentUserActions';
 import { connect } from 'react-redux';
-import {Login} from '../actions/CurrentUserActions';
 
 //what do i want to do?
 // find or create by user email
