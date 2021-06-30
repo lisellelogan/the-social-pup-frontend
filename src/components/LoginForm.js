@@ -9,11 +9,30 @@ import {Login} from '../actions/CurrentUserActions';
 // else state logged_in: false
 
 class LoginForm extends Component {
+
+    state = {
+        email: ""
+    }
+
+    handleOnChange = event => {
+        const name = event.target.name 
+        const value = event.target.value
+        this.setState({
+            [name]: value
+        })
+    }
+
+    handleOnSubmit = event => {
+        event.preventDefault()
+         
+        this.props.Login(this.state)
+    }
+
+
     render(){
         return(
-            <form>
-                <label>Email: </label><input type="text" name="email" /><br/>
-                <label>Password: </label><input type="text" name="password" /><br/>
+            <form onSubmit={this.handleOnSubmit}>
+                <label>Email: </label><input onChange={this.handleOnChange} type="text" name="email" /><br/>
                 <input type="submit" value="Login" />
             </form>
         )
