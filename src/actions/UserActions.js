@@ -36,7 +36,7 @@ export const createUser = (user) => {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
-                "Accepts": "application/json"
+                Accept: "application/json"
             },
             body: JSON.stringify(updatedUser)
         }

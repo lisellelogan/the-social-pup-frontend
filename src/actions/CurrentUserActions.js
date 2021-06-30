@@ -2,6 +2,13 @@ export const CurrentUserActions = (user) => ({type: "SET_CURRENT_USER", payload:
 
 export const Login = (userInput) => {
     return (dispatch) => {
-        console.log(userInput)
+        const configObj = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(userInput)
+        }
     }
 }
