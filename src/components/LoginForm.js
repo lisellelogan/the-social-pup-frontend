@@ -34,7 +34,7 @@ class LoginForm extends Component {
     render(){
         return(
             <form onSubmit={this.handleOnSubmit}>
-                <label>Email: </label><input onChange={this.handleOnChange} type="text" name="email" /><br/>
+                <label>Email: </label><input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} /><br/>
                 <input type="submit" value="Login" />
             </form>
         )
