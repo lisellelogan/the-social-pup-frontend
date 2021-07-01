@@ -24,8 +24,10 @@ class LoginForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-         
         this.props.Login(this.state)
+        this.setState({
+            email: ""
+        })
     }
 
 
