@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Users from '../components/Users';
 import { fetchUsers } from '../actions/UserActions';
-import RestrictedNavBar from '../components/RestrictedNavBar';
+// import RestrictedNavBar from '../components/RestrictedNavBar';
 
 class UsersContainer extends Component {
 
@@ -13,7 +13,7 @@ class UsersContainer extends Component {
     render(){
         return(
             <div>
-                <RestrictedNavBar />
+                {/* <RestrictedNavBar /> */}
                 <h2>Users Container</h2>
                 <Users users={this.props.users}/>
             </div>
