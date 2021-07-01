@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import { Login } from '../actions/CurrentUserActions';
 import { connect } from 'react-redux';
 
-//what do i want to do?
-// find or create by user email
-// if successful change state to logged_in: true
-    // connect to the store using { connect }
-// else state logged_in: false
-
 class LoginForm extends Component {
 
     state = {
