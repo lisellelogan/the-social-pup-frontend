@@ -1,4 +1,4 @@
-export const CurrentUserActions = (user) => ({type: "SET_CURRENT_USER", payload: user})
+export const loginUser = (user) => ({type: "SET_CURRENT_USER", payload: user})
 
 export const Login = (userInput) => {
     return (dispatch) => {
@@ -13,7 +13,7 @@ export const Login = (userInput) => {
         fetch("http://127.0.0.1:3001/login", configObj)
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
+             
             //if login successful, 
                 //update logged_in state
                 //set current user to logged in user
