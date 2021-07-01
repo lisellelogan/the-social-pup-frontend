@@ -12,11 +12,12 @@ export const Login = (userInput) => {
         }
         fetch("http://127.0.0.1:3001/login", configObj)
         .then(resp => resp.json())
-        .then(data => {
-             
-            //if login successful, 
-                //update logged_in state
-                //set current user to logged in user
+        .then(user => {
+             if (user.error) {
+                 alert(user.error)
+             } else {
+                 dispatch(loginUser(user))
+             }
         })
     }
 }
