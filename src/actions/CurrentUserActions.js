@@ -10,5 +10,10 @@ export const Login = (userInput) => {
             },
             body: JSON.stringify(userInput)
         }
+        fetch("http://127.0.0.1:3001/login")
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data)
+        })
     }
 }
