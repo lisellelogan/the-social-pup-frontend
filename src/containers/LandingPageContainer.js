@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import NavBarLanding from '../components/NavBarLanding';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import LogInForm from '../components/LogInForm';
 import SignUpForm from '../components/SignUpForm';
+import { connect } from 'react-redux';
 
 class LandingPageContainer extends Component {
     render(){
@@ -12,7 +13,9 @@ class LandingPageContainer extends Component {
                 <h2>Let's be friends!</h2>
                 <NavBarLanding />
                 <Switch>
-                    <Route path="/login" exact component={LogInForm} />
+                    <Route exact path="/login">
+                        {this.props.loggedIn === "true" ? <Redirect to="/users" /> : <LogInForm />}
+                    </Route>
                     <Route path="/signup" exact component={SignUpForm} >
                     </Route>
                 </Switch>
@@ -21,4 +24,10 @@ class LandingPageContainer extends Component {
     }
 }
 
-export default LandingPageContainer;
+const mapStateToProps = state => {
+    return {
+        loggedIn: state.loggedIn
+    }
+}
+
+export default connect(mapStateToProps)(LandingPageContainer);
