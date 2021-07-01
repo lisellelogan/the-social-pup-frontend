@@ -14,6 +14,9 @@ export const Login = (userInput) => {
         .then(resp => resp.json())
         .then(data => {
             console.log(data)
+            //if login successful, 
+                //update logged_in state
+                //set current user to logged in user
         })
     }
 }
