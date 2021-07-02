@@ -12,7 +12,7 @@ const RestrictedNavBar = (props) => {
         <>
             <RestrictedNavBarLinks />
             <Switch>
-                <Route path={`/users/${props.currentUser.id}`} exact component={ProfilePage} />
+                <Route path="/user/:id" exact component={ProfilePage} />
                 <Route path="/welcome" exact component={Welcome} />
                 <Route path="/users" exact component={UsersContainer} />
                 <Route path="/logout" exact component={Logout} />
