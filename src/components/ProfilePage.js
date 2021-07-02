@@ -26,7 +26,8 @@ const ProfilePage = (props) => {
 
 const mapStateProps = state => {
     return {
-        currentUser: state.loggedIn.currentUser
+        currentUser: state.loggedIn.currentUser,
+        friends: state.friends
     }
 }
 
