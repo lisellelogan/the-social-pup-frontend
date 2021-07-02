@@ -5,6 +5,11 @@ export default function loginReducer(state = {loggedIn: false, currentUser: null
                 loggedIn: true,
                 currentUser: action.payload
             }
+        case "LOGOUT_CURRENT_USER":
+            return {
+                loggedIn: false,
+                currentUser: null
+            }
         default:
             return state
     }
