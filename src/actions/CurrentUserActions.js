@@ -27,5 +27,17 @@ export const logoutUser = () => ({type: "LOGOUT_CURRENT_USER"})
 export const LogoutCurrentUser = () => {
     return (dispatch) => {
         dispatch(logoutUser())
+        
+        const configObj = {
+            method: 'DELETE',
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        }
+
+        fetch("http://127.0.0.1:3001/logout", configObj)
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data)
+        })
     }
 }
