@@ -2,7 +2,6 @@ for MVP 5 stateless components:
 - filter users
 - nav bar logged in:
     - profile
-    - logout
 
 for show page (profile):
 - add button to like and dislike
