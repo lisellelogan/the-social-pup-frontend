@@ -22,10 +22,10 @@ export const Login = (userInput) => {
     }
 }
 
-export const logoutUser = (user) => ({type: "LOGOUT_CURRENT_USER", payload: user})
+export const logoutUser = () => ({type: "LOGOUT_CURRENT_USER"})
 
-export const LogoutCurrentUser = (user) => {
+export const LogoutCurrentUser = () => {
     return (dispatch) => {
-        console.log(user)
+        dispatch(logoutUser())
     }
 }
