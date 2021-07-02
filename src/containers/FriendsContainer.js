@@ -12,4 +12,16 @@ class FriendsContainer extends Component {
     }
 }
 
-export default connect()(FriendsContainer);
+const mapStateProps = (state) => {
+    return {
+        friends: state.friends
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchFriends: () => dispatch(fetchFriends())
+    }
+}
+
+export default connect(mapStateProps, mapDispatchToProps)(FriendsContainer);
