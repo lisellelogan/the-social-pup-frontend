@@ -4,7 +4,7 @@ const User = (props) => {
     const user = props.user.attributes
 
     const handleOnClick = event => {
-        if (event.target.innerText) {
+        if (event.target.innerText === "Love") {
             //add to friends list
         }
     }
