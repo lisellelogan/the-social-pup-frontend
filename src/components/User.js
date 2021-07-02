@@ -2,6 +2,13 @@ import React from 'react';
 
 const User = (props) => {
     const user = props.user.attributes
+
+    const handleOnClick = event => {
+        if (event.target.innerText) {
+            //add to friends list
+        }
+    }
+
     return(
         <div>
             <li>
@@ -15,7 +22,7 @@ const User = (props) => {
                 Owner Name: {user.owner_name}<br/>
                 Email: {user.email}<br/><br/>
             </li>
-            <button>Love</button>  <button>Nope</button><br/><br/>
+            <button onClick={handleOnClick}>Love</button>  <button onClick={handleOnClick}>Nope</button><br/><br/>
         </div>
         
     )
