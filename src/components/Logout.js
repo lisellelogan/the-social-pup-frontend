@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Logout } from '../actions/CurrentUserActions';
 
 const Logout = () => {
     return (
@@ -8,4 +10,4 @@ const Logout = () => {
     )
 }
 
-export default Logout;
+export default connect(null, { Logout })(Logout);
