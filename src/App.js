@@ -16,9 +16,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({loggedIn: state.loggedIn })
+const mapStateToProps = state => ({
+  loggedIn: state.loggedIn.loggedIn
+})
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(App)
 
 // <>
       {/* <Switch> */}
