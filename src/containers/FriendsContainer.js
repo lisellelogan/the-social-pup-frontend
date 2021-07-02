@@ -5,7 +5,9 @@ import { fetchUsers } from '../actions/UserActions';
 class FriendsContainer extends Component {
     render(){
         return (
-            <div>We're in friends container!</div>
+            <div>
+                <h2>FriendsContainer</h2>
+            </div>
         )
     }
 }
