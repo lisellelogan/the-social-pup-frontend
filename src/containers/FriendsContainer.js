@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchUsers } from '../actions/UserActions';
+import { fetchFriends } from '../actions/FriendsActions';
 
 class FriendsContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchFriends()
+    }
+
     render(){
         return (
             <div>
