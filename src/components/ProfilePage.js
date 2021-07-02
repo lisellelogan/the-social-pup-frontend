@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User';
+// import User from './User';
 import { connect } from 'react-redux';
 
 const ProfilePage = (props) => {
@@ -7,9 +7,9 @@ const ProfilePage = (props) => {
         //user component
     //display list of friends
         //make friendsList component
+    
     return(
-        // <User />
-        <div>{props.pup_name}</div>
+        <div>{props.currentUser.pup_name}</div>
     )
     
 }

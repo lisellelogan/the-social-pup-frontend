@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 const RestrictedNavBar = (props) => {
     return(
         <>
-            <RestrictedNavBarLinks />
+            <RestrictedNavBarLinks user={props.currentUser} />
             <Switch>
                 <Route path="/user/:id" exact component={ProfilePage} />
                 <Route path="/welcome" exact component={Welcome} />

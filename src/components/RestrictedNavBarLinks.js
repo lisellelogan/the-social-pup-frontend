@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const RestrictedNavBarLinks = () => {
+const RestrictedNavBarLinks = (props) => {
     return(
     <div>
         <NavLink 
-            to="/users/profile"
+            to={`/user/${props.user.id}`}
             activeStyle={{
                 fontWeight: "bold",
                 color: "red"
