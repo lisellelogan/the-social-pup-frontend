@@ -5,6 +5,15 @@ const RestrictedNavBarLinks = () => {
     return(
     <div>
         <NavLink 
+            to="/users/profile"
+            activeStyle={{
+                fontWeight: "bold",
+                color: "red"
+            }}
+            >Profile
+        </NavLink><br/>
+
+        <NavLink 
             to="/welcome"
             activeStyle={{
                 fontWeight: "bold",
