@@ -3,8 +3,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const ProfilePage = (props) => {
-    //here i want to display user info
-        //user component
     //display list of friends
         //make friendsList component
     
