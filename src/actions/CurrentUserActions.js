@@ -37,7 +37,7 @@ export const LogoutCurrentUser = () => {
         fetch("http://127.0.0.1:3001/logout", configObj)
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
+            alert(data.message)
         })
     }
 }
