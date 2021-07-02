@@ -1,15 +1,23 @@
 import React from 'react';
 import User from './User';
+import { connect } from 'react-redux';
 
-const ProfilePage = () => {
+const ProfilePage = (props) => {
     //here i want to display user info
         //user component
     //display list of friends
         //make friendsList component
     return(
-        <User />
+        // <User />
+        <div>{props.pup_name}</div>
     )
     
 }
 
-export default ProfilePage;
+const mapStateProps = state => {
+    return {
+        currentUser: state.loggedIn.currentUser
+    }
+}
+
+export default connect(mapStateProps)(ProfilePage);
