@@ -1,5 +1,5 @@
 import React from 'react';
-import FriendsContainer from '../containers/FriendsContainer';
+import Friends from './Friends';
 import { connect } from 'react-redux';
 
 const ProfilePage = (props) => {
@@ -18,7 +18,7 @@ const ProfilePage = (props) => {
             Owner Name: {props.currentUser.owner_name}<br/>
             Email: {props.currentUser.email}<br/><br/>
 
-            <FriendsContainer />
+            <Friends friends={props.friends} />
         </div>
     )
     
@@ -27,7 +27,7 @@ const ProfilePage = (props) => {
 const mapStateProps = state => {
     return {
         currentUser: state.loggedIn.currentUser,
-        friends: state.friends
+        friends: state.loggedIn.currentUser.data.attributes.friends
     }
 }
 
