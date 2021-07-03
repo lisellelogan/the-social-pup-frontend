@@ -1,32 +1,23 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import { fetchFriends } from '../actions/FriendsActions';
+import React, { Component } from 'react';
+import Friends from './Friends';
+import { connect } from 'react-redux';
 
-// class FriendsContainer extends Component {
+class FriendsContainer extends Component {
 
-//     componentDidMount() {
-//         this.props.fetchFriends()
-//     }
+    render(){
+        return (
+            <div>
+                <h2>FriendsContainer</h2>
+                <Friends friends={this.props.friends} />
+            </div>
+        )
+    }
+}
 
-//     render(){
-//         return (
-//             <div>
-//                 <h2>FriendsContainer</h2>
-//             </div>
-//         )
-//     }
-// }
+const mapStateProps = (state) => {
+    return {
+        friends: state.loggedIn.currentUser.data.attributes.friends
+    }
+}
 
-// const mapStateProps = (state) => {
-//     return {
-//         friends: state.friends
-//     }
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         fetchFriends: () => dispatch(fetchFriends())
-//     }
-// }
-
-// export default connect(mapStateProps, mapDispatchToProps)(FriendsContainer);
+export default connect(mapStateProps)(FriendsContainer);
