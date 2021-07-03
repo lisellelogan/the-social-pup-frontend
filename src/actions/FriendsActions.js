@@ -7,8 +7,8 @@ export const fetchFriends = () => {
         fetch(url)
         .then(resp => resp.json())
         .then(data => {
-            // debugger
             const users = data.data
+            debugger
         })
     }
 }
