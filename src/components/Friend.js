@@ -5,3 +5,5 @@ const Friend = (props) => {
         <h1>{props.pup_name}</h1>
     )
 }
+
+export default Friend;
