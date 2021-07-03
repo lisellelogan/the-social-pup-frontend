@@ -13,7 +13,7 @@ class FriendsContainer extends Component {
         return (
             <div>
                 <h2>FriendsContainer</h2>
-                {/* <Friends friends={this.props.friends} /> */}
+                <Friends friends={this.props.friends} />
             </div>
         )
     }
@@ -21,6 +21,7 @@ class FriendsContainer extends Component {
 
 const mapStateProps = (state) => {
     return {
+        currentUser: state.loggedIn.currentUser.data.attributes,
         friends: state.loggedIn.currentUser.data.attributes.friends
     }
 }

@@ -3,7 +3,6 @@ import React from 'react';
 // import { fetchFriends } from '../actions/FriendsActions';
 
 const User = (props) => {
-    debugger
     const user = props.user.attributes
 
     const handleOnClick = event => {
