@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Friends from './Friends';
+import Friends from '../components/Friends';
 import { connect } from 'react-redux';
 
 class FriendsContainer extends Component {
