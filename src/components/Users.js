@@ -5,11 +5,14 @@ const Users = (props) => {
     const users = props.users.map(
         user => <User key={user.id} user={user} />
     )
+
     return(
         <ul>
-            {users}
+           { users }
         </ul>
     )
 }
 
-export default Users
+// props.currentUser.id === user.id ? <User key={user.id} user={user} /> : ""
+
+export default Users;
