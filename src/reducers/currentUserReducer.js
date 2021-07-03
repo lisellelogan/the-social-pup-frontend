@@ -12,6 +12,11 @@ export default function currentUserReducer(state = {loggedIn: false, currentUser
                 currentUser: null,
                 friends: []
             }
+        case "ADD_FRIEND":
+            return {
+                ...state,
+                friends: [...state.friends, action.payload]
+            }
         default:
             return state
     }

@@ -1,12 +1,15 @@
 import React from 'react';
+import { AddFriend } from '../actions/CurrentUserActions';
+import {connect } from 'react-redux';
 
 
 const User = (props) => {
+
     const user = props.user.attributes
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love") {
-            
+            props.AddFriend(props.user.attributes)
         }
     }
 
@@ -29,4 +32,4 @@ const User = (props) => {
     )
 }
 
-export default User;
+export default connect(null, {AddFriend})(User);
