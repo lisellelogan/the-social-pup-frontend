@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Welcome = () => {
+const Welcome = (props) => {
     return(
         <div>
-            Welcome to The Social Pup club!
+            <h1>Hi {props.currentUser.pup_name},</h1>
+            <p>Welcome to The Social Pup club!</p>
         </div>
     )
 }
