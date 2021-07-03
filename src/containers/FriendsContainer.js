@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Friends from '../components/Friends';
+import { fetchFriends } from '../actions/FriendsActions';
 import { connect } from 'react-redux';
 
 class FriendsContainer extends Component {
@@ -20,4 +21,10 @@ const mapStateProps = (state) => {
     }
 }
 
-export default connect(mapStateProps)(FriendsContainer);
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchFriends: () => dispatch(fetchFriends())
+    }
+}
+
+export default connect(mapStateProps, mapDispatchToProps)(FriendsContainer);
