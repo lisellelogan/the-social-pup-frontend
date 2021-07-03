@@ -1,13 +1,12 @@
 import React from 'react';
-// import { connect } from 'react-redux';
-// import { fetchFriends } from '../actions/FriendsActions';
+
 
 const User = (props) => {
     const user = props.user.attributes
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love") {
-            //add to friends list
+            
         }
     }
 
@@ -29,11 +28,5 @@ const User = (props) => {
         
     )
 }
-
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         fetchFriends: () => dispatch(fetchFriends())
-//     }
-// }
 
 export default User;
