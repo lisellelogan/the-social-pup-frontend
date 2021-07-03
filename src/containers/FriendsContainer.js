@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import Friends from '../components/Friends';
-import { fetchFriends } from '../actions/FriendsActions';
 import { connect } from 'react-redux';
 
 class FriendsContainer extends Component {
-
-    componentDidMount(){
-        this.props.fetchFriends()
-    }
 
     render(){
         return (
@@ -21,15 +16,8 @@ class FriendsContainer extends Component {
 
 const mapStateProps = (state) => {
     return {
-        currentUser: state.loggedIn.currentUser.data.attributes,
-        friends: state.loggedIn.currentUser.data.attributes.friends
+        friends: state.loggedIn.friends
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchFriends: () => dispatch(fetchFriends())
-    }
-}
-
-export default connect(mapStateProps, mapDispatchToProps)(FriendsContainer);
+export default connect(mapStateProps)(FriendsContainer);
