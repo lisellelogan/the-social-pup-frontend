@@ -8,7 +8,9 @@ const User = (props) => {
     const user = props.user.attributes
 
     const handleOnClick = event => {
-        if (event.target.innerText === "Love") {
+        debugger
+        //figure out filter option
+        if (event.target.innerText === "Love" && props.user.attributes.id !== props.currentUser.friends) {
             props.AddFriend(props.currentUser.id, props.user.attributes.id)
         }
     }
