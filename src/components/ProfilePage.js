@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import FriendsContainer from '../containers/FriendsContainer';
 
 const ProfilePage = (props) => {
-    //display list of friends
-        //make friendsList component
     
     return(
         <div>
@@ -22,11 +20,6 @@ const ProfilePage = (props) => {
 
             <h2>Friends</h2>
             <FriendsContainer />
-
-            {/* <div>
-                <h2>Friends</h2>
-                <Friends friends={props.friends} />
-            </div> */}
         </div>
     )
     
