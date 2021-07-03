@@ -1,6 +1,9 @@
 import React from 'react';
+// import { connect } from 'react-redux';
+// import { fetchFriends } from '../actions/FriendsActions';
 
 const User = (props) => {
+    debugger
     const user = props.user.attributes
 
     const handleOnClick = event => {
@@ -27,5 +30,11 @@ const User = (props) => {
         
     )
 }
+
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         fetchFriends: () => dispatch(fetchFriends())
+//     }
+// }
 
 export default User;
