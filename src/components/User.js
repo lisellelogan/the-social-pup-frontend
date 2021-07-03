@@ -9,7 +9,7 @@ const User = (props) => {
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love") {
-            props.AddFriend(props.user.attributes)
+            props.AddFriend(props.currentUser.id, props.user.attributes.id)
         }
     }
 
@@ -32,4 +32,10 @@ const User = (props) => {
     )
 }
 
-export default connect(null, {AddFriend})(User);
+const mapStateToProps = state => {
+    return {
+        currentUser: state.loggedIn.currentUser.data.attributes
+    }
+}
+
+export default connect(mapStateToProps, {AddFriend})(User);

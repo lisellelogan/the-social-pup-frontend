@@ -25,7 +25,7 @@ const RestrictedNavBar = (props) => {
 
 const mapStateToProps = state => {
     return {
-        currentUser: state.loggedIn.currentUser
+        currentUser: state.loggedIn.currentUser.data.attributes
     }
 }
 
