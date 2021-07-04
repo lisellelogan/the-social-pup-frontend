@@ -13,7 +13,7 @@ export default function usersReducer(state = [], action) {
             
             return {
                 ...state,
-                users: users
+                users
             }
         default:
             return state
