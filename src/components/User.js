@@ -7,11 +7,14 @@ const User = (props) => {
 
     const user = props.user.attributes
 
+    const friend = props.currentUser.friends.filter(friend => props.user.attributes.id === friend.id)
+
     const handleOnClick = event => {
-        debugger
         //figure out filter option
-        if (event.target.innerText === "Love" && props.user.attributes.id !== props.currentUser.friends) {
+        if (event.target.innerText === "Love" && friend === []) {
             props.AddFriend(props.currentUser.id, props.user.attributes.id)
+        } else {
+            alert("You're already friends!")
         }
     }
 
