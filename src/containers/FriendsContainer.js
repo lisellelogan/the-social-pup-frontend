@@ -3,7 +3,7 @@ import Friends from '../components/Friends';
 import { connect } from 'react-redux';
 
 class FriendsContainer extends Component {
-
+    
     render(){
         return (
             <div>

@@ -1,18 +1,18 @@
 import React from 'react';
-import { AddFriend } from '../actions/CurrentUserActions';
 import { RemoveUserFromList } from '../actions/UserActions';
+import FriendsContainer from '../containers/FriendsContainer';
 import {connect } from 'react-redux';
 
 
 const User = (props) => {
-
-    const user = props.user
+    const user = props.user[0]
 
     const friend = props.currentUser.friends.filter(friend => props.user.id === friend.id)
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love" && friend.length === 0) {
-            props.AddFriend(props.currentUser.id, props.user.id) 
+            <FriendsContainer addFriend={props.user.id}/>
+            // (props.AddFriend(props.currentUser.id, props.user.id) &&
             props.RemoveUserFromList(props.user)
         } else {
             alert("You're already friends!")
@@ -46,7 +46,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        AddFriend: (currentUser, user) => dispatch(AddFriend(currentUser, user)),
+        // AddFriend: (currentUser, user) => dispatch(AddFriend(currentUser, user)),
         RemoveUserFromList: (user) => dispatch(RemoveUserFromList(user))
     }
 }
