@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AddFriend } from '../actions/CurrentUserActions';
+import { RemoveUserFromList } from '../actions/UserActions';
 import {connect } from 'react-redux';
 
 
@@ -11,7 +12,8 @@ const User = (props) => {
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love" && friend.length === 0) {
-            props.AddFriend(props.currentUser.id, props.user.id) && props.RemoveUserFromList(props.user.id)
+            props.AddFriend(props.currentUser.id, props.user.id) 
+            props.RemoveUserFromList(props.user.id)
         } else {
             alert("You're already friends!")
         }

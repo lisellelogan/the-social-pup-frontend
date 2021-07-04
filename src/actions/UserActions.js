@@ -49,3 +49,12 @@ export const createUser = (user) => {
         })
     }
 }
+
+const RemoveUser = (user) => ({type: "REMOVE_USER", payload: user})
+
+export const RemoveUserFromList = (user) => {
+    return (dispatch) => {
+        debugger
+        dispatch(RemoveUser(user))
+    }
+}
