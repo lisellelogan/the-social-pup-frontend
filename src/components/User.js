@@ -1,6 +1,6 @@
 import React from 'react';
 import { RemoveUserFromList } from '../actions/UserActions';
-import FriendsContainer from '../containers/FriendsContainer';
+import Friends from '../components//Friends';
 import {connect } from 'react-redux';
 
 
@@ -11,7 +11,7 @@ const User = (props) => {
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love" && friend.length === 0) {
-            <FriendsContainer addFriend={props.user.id}/>
+            <Friends addFriend={props.user.id}/>
             // (props.AddFriend(props.currentUser.id, props.user.id) &&
             props.RemoveUserFromList(props.user)
         } else {
