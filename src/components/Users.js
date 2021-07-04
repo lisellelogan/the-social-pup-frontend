@@ -6,28 +6,32 @@ const Users = (props) => {
     // only want to pass users that are not in friends list nad not a current user
     const friends = props.friends
 
-    const users = props.users
+    const users = props.users.map(userData => userData.attributes)
     
     const filteredUsers = (friends, users) => {
-        const findFriends = [];
 
-        friends.forEach(friend => users.forEach(user => {
-            if (friend.id !== user.id){
-                findFriends.push(friend)
-            }
-        }))
-        return findFriends
+        let findFriends = [...friends, ...users]
+
+        debugger
+        // return friends.map(function(friend) {
+        //     return users.reduce(function(acc, val){
+        //         friend.id !== val.attributes.id && acc.friend++;
+        //         debugger
+        //         return acc;
+        //     }, {friend})
+        // });
     }
 
-    debugger
+    filteredUsers(friends, users)
+
 
     // const users = props.users.map(
     //     user => <User key={user.id} user={user} />
-    // )
+    // 
 
     return(
         <ul>
-           { filteredUsers(friends, users) }
+           Users!
         </ul>
     )
 }
