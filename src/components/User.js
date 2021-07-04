@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { AddFriend } from '../actions/CurrentUserActions';
 import { RemoveUserFromList } from '../actions/UserActions';
 import {connect } from 'react-redux';
