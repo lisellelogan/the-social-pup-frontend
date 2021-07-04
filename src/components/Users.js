@@ -17,14 +17,11 @@ const Users = (props) => {
         return filterUsers
     }
 
-    const filteredUsersList = filteredUsers(users, friends).filter(user => props.currentUser.id !== user.id ? <User key={user.id} user={user} /> : "")
-    // const users = props.users.map(
-    //     user => <User key={user.id} user={user} />
+    const filteredUsersList = filteredUsers(users, friends).map(user => props.currentUser.id !== user.id ? <User key={user.id} user={user} /> : "")
 
 
     return(
         <ul>
-           Users!
            {filteredUsersList}
         </ul>
     )

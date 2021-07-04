@@ -4,14 +4,15 @@ import {connect } from 'react-redux';
 
 
 const User = (props) => {
+    debugger
 
-    const user = props.user.attributes
+    const user = props.user
 
-    const friend = props.currentUser.friends.filter(friend => props.user.attributes.id === friend.id)
+    const friend = props.currentUser.friends.filter(friend => props.user.id === friend.id)
 
     const handleOnClick = event => {
         if (event.target.innerText === "Love" && friend.length === 0) {
-            props.AddFriend(props.currentUser.id, props.user.attributes.id)
+            props.AddFriend(props.currentUser.id, props.user.id)
         } else {
             alert("You're already friends!")
         }
