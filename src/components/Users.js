@@ -8,26 +8,20 @@ const Users = (props) => {
 
     const users = props.users.map(userData => userData.attributes)
     
-    const filteredUsers = (friends, users) => {
+    const filteredUsers = (users, friends) => {
 
-        let findFriends = [...friends, ...users]
-
-        debugger
-        // return friends.map(function(friend) {
-        //     return users.reduce(function(acc, val){
-        //         friend.id !== val.attributes.id && acc.friend++;
-        //         debugger
-        //         return acc;
-        //     }, {friend})
-        // });
+        let filteredUsersList = users.filter(user => !friends.some(friend => (
+            friend.id !== user.id
+            )
+        ))
+        return filteredUsersList
     }
 
-    filteredUsers(friends, users)
-
-
+    filteredUsers(users, friends)
     // const users = props.users.map(
     //     user => <User key={user.id} user={user} />
-    // 
+    //
+    debugger
 
     return(
         <ul>
