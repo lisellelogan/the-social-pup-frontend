@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import FriendsContainer from '../containers/FriendsContainer';
 
 const ProfilePage = (props) => {
     
@@ -17,9 +16,6 @@ const ProfilePage = (props) => {
                 Owner Name: {props.currentUser.owner_name}<br/>
                 Email: {props.currentUser.email}<br/><br/>
             </div>
-
-            <h2>Friends</h2>
-            <FriendsContainer />
         </div>
     )
     
