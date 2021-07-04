@@ -5,8 +5,10 @@ import { connect } from 'react-redux';
 const Users = (props) => {
     // only want to pass users that are not in friends list nad not a current user
     const friends = props.friends
-    const users = props.users.map(userData => userData.attributes)
-    
+    const users = props.users
+
+    console.log(props)
+
     const filteredUsers = (users, friends) => {
 
         let filterUsers = users.filter(user => !friends.some(friend => (
@@ -16,7 +18,7 @@ const Users = (props) => {
         return filterUsers
     }
 
-    const filteredUsersList = filteredUsers(users, friends).map(user => props.currentUser.id !== user.id ? <User key={user.id} user={[user]} /> : "")
+    const filteredUsersList = filteredUsers(users, friends).map(user => props.currentUser.id !== user.id ? <User key={user.id} user={user} /> : "")
 
     return(
         <ul>

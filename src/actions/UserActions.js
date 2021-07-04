@@ -7,7 +7,7 @@ export const fetchUsers = () => {
         fetch(url)
         .then(resp => resp.json())
         .then(data => {
-            const users = data.data
+            const users = data.data.map(usersData => usersData.attributes)
             dispatch(setUsers(users))
         })
     }

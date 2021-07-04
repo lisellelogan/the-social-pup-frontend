@@ -13,22 +13,16 @@ class UsersContainer extends Component {
         return(
             <div>
                 <h2>Users Container</h2>
-                <Users users={this.props.users} />
+                <Users users={this.props.users}/>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         users: state.users
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchUsers: () => dispatch(fetchUsers())
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, {fetchUsers})(UsersContainer);

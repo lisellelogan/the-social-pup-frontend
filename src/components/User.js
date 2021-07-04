@@ -5,7 +5,7 @@ import {connect } from 'react-redux';
 
 
 const User = (props) => {
-    const user = props.user[0]
+    const user = props.user
 
     const friend = props.currentUser.friends.filter(friend => props.user.id === friend.id)
 
