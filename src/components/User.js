@@ -1,10 +1,14 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import MessageUser from './MessageUser';
 
 const User = (props) => {
     const user = props.user
 
-    const handleOnClick = event => {
+    const handleOnClick = () => {
         // route to message and "submit form"
+       
+
     }
 
     return(
@@ -20,7 +24,7 @@ const User = (props) => {
                 Owner Name: {user.owner_name}<br/>
                 Email: {user.email}<br/><br/>
             </li>
-            <button onClick={this.handleOnClick}> Email {user.pup_name} </button><br/><br/>
+            <button onClick={handleOnClick}> Email {user.pup_name} </button><br/><br/>
         </div>
         
     )
