@@ -3,18 +3,18 @@ export default function usersReducer(state = [], action) {
         case "GOT_USERS":
             return action.payload
         case "ADDED_USER":
-            return {
+            return [
                 ...state,
-                users: action.payload
-            }
+                action.payload
+            ]
         case "REMOVE_USER":
             const getUsersAttributes = state.map(user => user.attributes)
             const users = getUsersAttributes.filter(user => user.id !== action.payload.id)
             
-            return {
+            return [
                 ...state,
                 users
-            }
+            ]
         default:
             return state
     }
