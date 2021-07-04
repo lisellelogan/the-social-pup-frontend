@@ -4,8 +4,7 @@ import User from './User';
 
 const Users = (props) => {
     // const users = props.users.map(user => <User key={user.id} user={user} />)
-
-    const users = props.users.map(props.currentUser.id !== user.id ? <User key={user.id} user={user} /> : [])
+    const users = props.users.map(user => props.currentUser.id !== user.id ? <User key={user.id} user={user} /> : [])
 
     return (
         <ul>
