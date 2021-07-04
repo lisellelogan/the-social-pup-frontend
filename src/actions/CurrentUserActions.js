@@ -41,30 +41,3 @@ export const LogoutCurrentUser = () => {
         })
     }
 }
-
-export const addedFriend = (friend) => ({type: "ADD_FRIEND", payload: friend})
-
-export const AddFriend = (currentUser, friend) => {
-
-    const mutualFriends = {
-        user_id: currentUser,
-        friend_id: friend
-    }
-
-    return (dispatch) => {
-        const configObj = {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
-            },
-            body: JSON.stringify(mutualFriends)
-        }
-
-        fetch("http://127.0.0.1:3001/friendships", configObj)
-        .then(resp => resp.json())
-        .then(data => {
-            dispatch(addedFriend(data.user_id))
-        })
-    }
-}
