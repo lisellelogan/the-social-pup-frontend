@@ -13,7 +13,7 @@ const User = (props) => {
     const handleOnClick = event => {
         if (event.target.innerText === "Love" && friend.length === 0) {
             props.AddFriend(props.currentUser.id, props.user.id) 
-            props.RemoveUserFromList(props.user.id)
+            props.RemoveUserFromList(props.user)
         } else {
             alert("You're already friends!")
         }

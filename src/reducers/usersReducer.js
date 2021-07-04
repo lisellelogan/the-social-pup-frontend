@@ -7,6 +7,14 @@ export default function usersReducer(state = [], action) {
                 ...state,
                 users: action.payload
             }
+        case "REMOVE_USER":
+            const getUsersAttributes = state.map(user => user.attributes)
+            const users = getUsersAttributes.filter(user => user.id !== action.payload.id)
+
+            return {
+                ...state,
+                users: users
+            }
         default:
             return state
     }
