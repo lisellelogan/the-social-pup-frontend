@@ -1,14 +1,10 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import MessageUser from './MessageUser';
 
 const User = (props) => {
     const user = props.user
 
-    const handleOnClick = () => {
-        // route to message and "submit form"
-       
-
+    handleOnClick = () => {
+        alert("Email Request sent!")
     }
 
     return(
@@ -22,11 +18,10 @@ const User = (props) => {
                 Pup Personality: {user.pup_personality}<br/>
                 Pup Location: {user.pup_location}<br/>
                 Owner Name: {user.owner_name}<br/>
-                Email: {user.email}<br/><br/>
+                Email: {user.email}<br/>
             </li>
-            <button onClick={handleOnClick}> Email {user.pup_name} </button><br/><br/>
-        </div>
-        
+           <button onClick={this.handleOnClick}>Email {user.pup_name}</button>
+        </div> 
     )
 }
 
