@@ -3,6 +3,10 @@ import React from 'react';
 const User = (props) => {
     const user = props.user
 
+    const handleOnClick = event => {
+        // route to message and "submit form"
+    }
+
     return(
         <div>
             <li id={user.id}>
@@ -16,7 +20,7 @@ const User = (props) => {
                 Owner Name: {user.owner_name}<br/>
                 Email: {user.email}<br/><br/>
             </li>
-            <button >Email {user.pup_name}</button><br/><br/>
+            <button onClick={this.handleOnClick}> Email {user.pup_name} </button><br/><br/>
         </div>
         
     )
