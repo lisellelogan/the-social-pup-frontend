@@ -6,18 +6,18 @@ import {connect } from 'react-redux';
 
 
 const User = (props) => {
-    const user = props.user[0]
+    const user = props.user
 
-    const friend = props.currentUser.friends.filter(friend => props.user.id === friend.id)
+    // const friend = props.currentUser.friends.filter(friend => props.user.id === friend.id)
 
-    const handleOnClick = event => {
-        if (event.target.innerText === "Love" && friend.length === 0) {
-            props.AddFriend(props.currentUser.id, props.user.id)
-            // && props.RemoveUserFromList(props.user))
-        } else {
-            alert("You're already friends!")
-        }
-    }
+    // const handleOnClick = event => {
+    //     if (event.target.innerText === "Love" && friend.length === 0) {
+    //         props.AddFriend(props.currentUser.id, props.user.id)
+    //         // && props.RemoveUserFromList(props.user))
+    //     } else {
+    //         alert("You're already friends!")
+    //     }
+    // }
 
     return(
         <div>
@@ -32,7 +32,7 @@ const User = (props) => {
                 Owner Name: {user.owner_name}<br/>
                 Email: {user.email}<br/><br/>
             </li>
-            <button onClick={handleOnClick}>Love</button>  <button onClick={handleOnClick}>Nope</button><br/><br/>
+            <button >Email {user.pup_name}</button><br/><br/>
         </div>
         
     )
