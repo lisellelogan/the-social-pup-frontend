@@ -10,8 +10,7 @@ const User = (props) => {
     const friend = props.currentUser.friends.filter(friend => props.user.attributes.id === friend.id)
 
     const handleOnClick = event => {
-        //figure out filter option
-        if (event.target.innerText === "Love" && friend === []) {
+        if (event.target.innerText === "Love" && friend.length === 0) {
             props.AddFriend(props.currentUser.id, props.user.attributes.id)
         } else {
             alert("You're already friends!")
@@ -20,7 +19,7 @@ const User = (props) => {
 
     return(
         <div>
-            <li>
+            <li id={user.id}>
                 <img src={user.picture} alt={user.picture}/><br/>
                 Pup Name: {user.pup_name}<br/>
                 Pup Age: {user.pup_age}<br/>
