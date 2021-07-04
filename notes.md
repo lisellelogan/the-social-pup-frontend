@@ -10,10 +10,14 @@ for show page (profile):
     - when a user deletes a friend, will remove from list and remove from global state
         - so i need to use an event handler and connect to the store
 
-for all users:
-- if time, try to implement deck of cards
-
 
 create messages container (DO THIS LAST):
 - form that will email user (does not actually need to submit to anything just for show)
+
+to do:
+[] remove added friend from user list
+[] delete friendship
+[] when friend is added no refresh if needed
+    - should go to profile and see friend added to list
+[] messenger = just link to email form
 
