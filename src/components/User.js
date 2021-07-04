@@ -4,7 +4,6 @@ import {connect } from 'react-redux';
 
 
 const User = (props) => {
-    debugger
 
     const user = props.user
 
