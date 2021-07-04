@@ -3,7 +3,7 @@ import React from 'react';
 const User = (props) => {
     const user = props.user
 
-    handleOnClick = () => {
+    const handleOnClick = () => {
         alert("Email Request sent!")
     }
 
@@ -20,7 +20,7 @@ const User = (props) => {
                 Owner Name: {user.owner_name}<br/>
                 Email: {user.email}<br/>
             </li>
-           <button onClick={this.handleOnClick}>Email {user.pup_name}</button>
+           <button onClick={handleOnClick}>Email {user.pup_name}</button><br/><br/>
         </div> 
     )
 }
