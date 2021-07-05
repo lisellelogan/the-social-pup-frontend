@@ -3,14 +3,12 @@ export default function currentUserReducer(state = {loggedIn: false, currentUser
         case "SET_CURRENT_USER":
             return {
                 loggedIn: true,
-                currentUser: action.payload,
-                friends: action.payload.data.attributes.friends
+                currentUser: action.payload
             }
         case "LOGOUT_CURRENT_USER":
             return {
                 loggedIn: false,
-                currentUser: null,
-                friends: []
+                currentUser: null
             }
         default:
             return state
