@@ -22,7 +22,7 @@ class UsersContainer extends Component {
 const mapStateToProps = state => {
     return {
         users: state.users,
-        currentUser: state.loggedIn.currentUser.data.attributes
+        currentUser: state.loggedIn.currentUser.attributes
     }
 }
 
