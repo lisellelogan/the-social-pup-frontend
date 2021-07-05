@@ -3,7 +3,9 @@ import React from 'react';
 const User = (props) => {
     const user = props.user
 
-    const handleOnClick = () => {
+    const handleOnClick = event => {
+        debugger
+        event.target.remove()
         alert("Email Request sent!")
     }
 
@@ -20,7 +22,7 @@ const User = (props) => {
                 Owner Name: {user.owner_name}<br/>
                 Email: {user.email}<br/>
             </li>
-           <button onClick={handleOnClick}>Email {user.pup_name}</button><br/><br/>
+           <button id="email-button" onClick={handleOnClick}>Email {user.pup_name}</button><br/><br/>
         </div> 
     )
 }
