@@ -4,9 +4,10 @@ const User = (props) => {
     const user = props.user
 
     const handleOnClick = event => {
-        debugger
-        event.target.remove()
-        alert("Email Request Sent!")
+        if (event.target.innerText !== "pending") {
+            event.target.innerText = "pending"
+            alert("Email Request Sent!")
+        }
     }
 
     return(
