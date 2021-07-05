@@ -1,16 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { LogoutCurrentUser } from '../actions/CurrentUserActions';
+import { useHistory } from 'react-router';
 
 const Logout = (props) => {
 
-    return (
-        // <form onSubmit={props.LogoutCurrentUser()}>
-        //     <input type="submit" value="Logout" />
-        // </form>
+    const history = useHistory()
 
-        <button onClick={() => props.LogoutCurrentUser()} >
-            Logout
+    const handleOnClick = () => {
+        history.push('/')
+        props.LogoutCurrentUser()
+    }
+
+    return (
+        <button onClick={handleOnClick} >
+            Are You Sure?
         </button>
     )
 }
