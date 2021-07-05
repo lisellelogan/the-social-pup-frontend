@@ -1,3 +1,5 @@
+import { loginUser } from "./CurrentUserActions"
+
 const url = "http://127.0.0.1:3001/users"
 
 const setUsers = (users) => ({type: "GOT_USERS", payload: users})
@@ -45,6 +47,7 @@ export const createUser = (user) => {
         .then(data => {
             const user = data.data
             dispatch(addUser(user))
+            dispatch(loginUser(user))
         })
     }
 }
