@@ -6,7 +6,7 @@ const User = (props) => {
     const handleOnClick = event => {
         debugger
         event.target.remove()
-        alert("Email Request sent!")
+        alert("Email Request Sent!")
     }
 
     return(
