@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { createUser } from "../actions/UserActions";
 import { connect } from 'react-redux';
-import { loginUser } from '../actions/CurrentUserActions';
 
 class SignUpForm extends Component {
 
@@ -27,10 +26,8 @@ class SignUpForm extends Component {
     }
 
     handleOnSubmit = event => {
-        debugger
         event.preventDefault()
         this.props.createUser(this.state)
-        this.props.loginUser(this.state)
 
         this.setState({
             email: "",
@@ -70,11 +67,5 @@ class SignUpForm extends Component {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        createUser: () => dispatch(createUser()),
-        loginUser: () => dispatch(loginUser())
-    }
-}
 
-export default connect(null, mapDispatchToProps)(SignUpForm);
+export default connect(null, {createUser})(SignUpForm);
