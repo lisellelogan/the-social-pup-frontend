@@ -27,9 +27,8 @@ class SignUpForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        // dispatch action to update store
         this.props.createUser(this.state)
-        //clear form
+
         this.setState({
             email: "",
             password: "",
@@ -59,7 +58,7 @@ class SignUpForm extends Component {
                     No: <input onChange={this.handleOnChange} type="radio" name="pupFullyVaccinated" value="no" /><br />
                     <label>Pup Personality: </label> <input onChange={this.handleOnChange} type="text" name="pupPersonality" value={this.state.pupPersonality} required /><br/>
                     <label>Pup Location: </label> <input onChange={this.handleOnChange} type="text" name="pupLocation" value={this.state.pupLocation} placeholder="ex. New York, NY" required /><br/>
-                    <label>Owner Name: </label> <input onChange={this.handleOnChange} type="text" name="ownerName" value={this.ownerName} required /><br/>
+                    <label>Owner Name: </label> <input onChange={this.handleOnChange} type="text" name="ownerName" value={this.state.ownerName} required /><br/>
                     <label>Profile Picture: </label><input onChange={this.handleOnChange} type="text" name="picture" value={this.state.picture} placeholder="image link" required /><br/>
                     <input type="submit" value="Signup" />
                 </form>
