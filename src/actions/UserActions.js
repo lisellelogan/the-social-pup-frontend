@@ -16,7 +16,6 @@ export const fetchUsers = () => {
 const addUser = (user) => ({type: "ADDED_USER", payload: user})
 
 export const createUser = (user) => {
-
     return (dispatch) => {
 
         const updatedUser = {
