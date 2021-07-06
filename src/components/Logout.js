@@ -13,7 +13,7 @@ const Logout = (props) => {
     }
 
     return (
-        <button onClick={handleOnClick} >
+        <button className="logoutButton" onClick={handleOnClick} >
             Are You Sure?
         </button>
     )

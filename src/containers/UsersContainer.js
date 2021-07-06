@@ -12,7 +12,7 @@ class UsersContainer extends Component {
     render(){
         return(
             <div>
-                <h2>Find Friends!</h2>
+                <h2 className="friendTitle">Find Friends!</h2>
                 <Users users={this.props.users} currentUser={this.props.currentUser}/>
             </div>
         )

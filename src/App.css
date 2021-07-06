@@ -36,7 +36,7 @@ html, body {
 }
 
 img {
-  height: 400px;
+  height: 200px;
   width: auto;
   border-radius: 10px;
 }
@@ -73,5 +73,70 @@ a {
 }
 
 .profilePage {
+  align-items: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.profileName{
+  text-align: center;
+}
+
+.profileCard {
+  border-radius: 5px;
   display: flex;
+  padding: 10px 15px;
+  border: 4px #FCF8ED solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.profileDetails {
+  margin-top: 25%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.profileDetails > * {
+  margin-left: 25%;
+  transform: translateX(-50%);
+}
+
+.welcome {
+  text-align: center;
+}
+
+.friends {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.friends > * {
+  list-style: none;
+  padding: 10px 15px;
+  border: 4px #FCF8ED solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 20px 40px;
+  width: 600px;
+}
+
+
+.friendDetails {
+
+}
+
+.logoutButton {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20%;
+  padding: 6px 10px;
+  border: 2px #FCF8ED solid;
+  border-radius: 6px;
+  color: #FCF8ED;
+  background-color: #E76F51;
+  font-size: 24px;
+}
+
+.logoutButton:hover {
+  cursor: pointer;
 }
