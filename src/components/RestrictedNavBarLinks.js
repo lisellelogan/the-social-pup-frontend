@@ -3,12 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 const RestrictedNavBarLinks = (props) => {
     return(
-    <div>
+    <div className="navBar">
         <NavLink 
             to={`/user/${props.user.id}`}
             activeStyle={{
-                fontWeight: "bold",
-                color: "red"
+                fontWeight: "bold"
             }}
             >Profile
         </NavLink><br/>
@@ -16,8 +15,7 @@ const RestrictedNavBarLinks = (props) => {
         <NavLink 
             to="/welcome"
             activeStyle={{
-                fontWeight: "bold",
-                color: "red"
+                fontWeight: "bold"
             }}
             >Welcome
         </NavLink><br/>
@@ -25,16 +23,14 @@ const RestrictedNavBarLinks = (props) => {
         <NavLink 
             to="/users"
             activeStyle={{
-                fontWeight: "bold",
-                color: "red"
+                fontWeight: "bold"
             }}
             >Find Friends
         </NavLink><br/>
 
         <NavLink to="/logout"
             activeStyle={{
-                fontWeight: "bold",
-                color: "red"
+                fontWeight: "bold"
             }}
             >Logout
         </NavLink>

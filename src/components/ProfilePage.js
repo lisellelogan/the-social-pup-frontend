@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const ProfilePage = (props) => {
     
     return(
-        <div>
+        <div className="profilePage">
             <h1>{props.currentUser.pup_name}'s Profile</h1>
             <img src={props.currentUser.picture} alt={props.currentUser.picture}/><br/>
             Pup Name: {props.currentUser.pup_name}<br/>

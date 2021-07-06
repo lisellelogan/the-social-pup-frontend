@@ -4,23 +4,23 @@ import { NavLink } from 'react-router-dom';
 const NavBarLanding = () => {
     return(
     <div className="buttonDiv">
-        <NavLink 
+        <NavLink className="loginButton"
             to="/login"
             activeStyle={{
                 fontWeight: "bold",
-                color: "red",
+                color: "#F0DDA8",
             }}
             >Login
-        </NavLink><br/><br/><br/>
+        </NavLink><br/><br/>
 
-        <NavLink
+        <NavLink className="signupButton"
             to="/signup"
             activeStyle={{
                 fontWeight: "bold",
-                color: "red"
+                color: "#F0DDA8"
             }}
             >Signup
-        </NavLink><br/><br/><br/>
+        </NavLink><br/><br/>
     </div>
     )
 }

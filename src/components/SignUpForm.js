@@ -46,7 +46,7 @@ class SignUpForm extends Component {
     render(){
         return(
             <div> 
-                <form onSubmit={this.handleOnSubmit}>
+                <form className="form" onSubmit={this.handleOnSubmit}>
                     <label>Email: </label> <input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} placeholder="email@email.com" required /><br/>
                     <label>Password: </label> <input onChange={this.handleOnChange} type="text" name="password" value={this.state.password} required /><br/>
                     <label>Pup Name: </label> <input onChange={this.handleOnChange} type="text"name="pupName" value={this.state.pupName} required /><br/> 
