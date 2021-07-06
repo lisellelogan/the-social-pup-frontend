@@ -16,7 +16,7 @@ export const Login = (userInput) => {
              if (user.error) {
                  alert(user.error)
              } else {
-                 dispatch(loginUser(user))
+                 dispatch(loginUser(user.data))
              }
         })
     }
