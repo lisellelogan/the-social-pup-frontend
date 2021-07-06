@@ -7,7 +7,7 @@ const ProfilePage = (props) => {
         <div className="profilePage">
             <h1 className="profileName">{props.currentUser.pup_name}'s Profile</h1>
             <div className="profileCard">
-                <img src={props.currentUser.picture} alt={props.currentUser.picture}/><br/>
+                <img className="profileImg" src={props.currentUser.picture} alt={props.currentUser.picture}/><br/>
                 <div className="profileDetails">
                     <span>Pup Name: {props.currentUser.pup_name}<br/></span>
                     <span>Pup Age: {props.currentUser.pup_age}<br/></span>

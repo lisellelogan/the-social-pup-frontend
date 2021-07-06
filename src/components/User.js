@@ -13,7 +13,7 @@ const User = (props) => {
     return(
         <div>
             <li id={user.id}>
-                <img src={user.picture} alt={user.picture}/><br/>
+                <img className="friendImg" src={user.picture} alt={user.picture}/><br/>
                 <div className="friendDetails">
                     Pup Name: {user.pup_name}<br/>
                     Pup Age: {user.pup_age}<br/>

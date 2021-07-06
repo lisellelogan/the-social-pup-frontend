@@ -36,8 +36,9 @@ html, body {
 }
 
 img {
-  height: 200px;
+  height: 350px;
   width: auto;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -85,7 +86,7 @@ a {
 .profileCard {
   border-radius: 5px;
   display: flex;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border: 4px #FCF8ED solid;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
@@ -106,6 +107,16 @@ a {
   text-align: center;
 }
 
+.friendTitle {
+  text-align: center;
+  margin-left: 5%;
+}
+
+.friendImg {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 .friends {
   margin-left: 50%;
   transform: translateX(-50%);
@@ -122,7 +133,7 @@ a {
 
 
 .friendDetails {
-
+  text-align: center;
 }
 
 .logoutButton {
@@ -139,4 +150,15 @@ a {
 
 .logoutButton:hover {
   cursor: pointer;
+}
+
+#email-button {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 2px #FCF8ED solid;
+  border-radius: 4px;
+  color: #FCF8ED;
+  background-color: #E76F51;
+  transition: all .3s;
+  font-size: 22px;
 }
