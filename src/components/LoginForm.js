@@ -28,7 +28,7 @@ class LoginForm extends Component {
     render(){
         return(
             <form className="form" onSubmit={this.handleOnSubmit}>
-                <label>Email: </label><input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} /><br/>
+                <label>Email: </label><input onChange={this.handleOnChange} type="text" name="email" value={this.state.email} required /><br/>
                 <input type="submit" value="Login" />
             </form>
         )
