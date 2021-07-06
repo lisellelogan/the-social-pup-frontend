@@ -22,7 +22,7 @@ const ProfilePage = (props) => {
 
 const mapStateProps = state => {
     return {
-        currentUser: state.loggedIn.currentUser.attributes
+        currentUser: state.loggedIn.currentUser.data.attributes
     }
 }
 
