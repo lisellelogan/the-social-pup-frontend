@@ -4,7 +4,7 @@
  
 The Social Pup was created to help new dog owners, and old, find other pup's to have play dates! This application allows owner's to sign in as their dog and find other pup's to message via email.
  
-The Social Pup was created using a [Ruby on Rails API](https://github.com/lisellelogan/the-social-pup-backend) for the backend and a HTML, CSS, and JavaScript for the [forntend](https://github.com/lisellelogan/the-social-pup-frontend).
+The Social Pup was created using a [Ruby on Rails API](https://github.com/lisellelogan/the-social-pup-backend) for the backend and a HTML, CSS, and JavaScript for the [frontend](https://github.com/lisellelogan/the-social-pup-frontend).
  
 ## Visuals
  
