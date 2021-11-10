@@ -1,6 +1,6 @@
 import { loginUser } from "./CurrentUserActions"
 
-const url = "http://127.0.0.1:3001/users"
+const url = "https://thesocialpup.netlify.app/users"
 
 const setUsers = (users) => ({type: "GOT_USERS", payload: users})
 
