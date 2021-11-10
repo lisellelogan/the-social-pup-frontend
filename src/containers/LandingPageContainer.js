@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBarLanding from '../components/NavBarLanding';
 import { Switch, Route } from 'react-router-dom';
-import LogInForm from '../components/LogInForm.js';
+import LogInForm from '../components/LogInForm';
 import SignUpForm from '../components/SignUpForm';
 
 
