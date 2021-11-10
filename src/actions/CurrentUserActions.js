@@ -10,7 +10,7 @@ export const Login = (userInput) => {
             },
             body: JSON.stringify(userInput)
         }
-        fetch("https://thesocialpup.netlify.app/login", configObj)
+        fetch("http://the-social-pup-backend.herokuapp.com/login", configObj)
         .then(resp => resp.json())
         .then(user => {
              if (user.error) {
@@ -34,7 +34,7 @@ export const LogoutCurrentUser = () => {
             Accept: "application/json"
         }
 
-        fetch("https://thesocialpup.netlify.app/logout", configObj)
+        fetch("http://the-social-pup-backend.herokuapp.com/logout", configObj)
         .then(resp => resp.json())
         .then(data => {
             alert(data.message)
