@@ -1,6 +1,6 @@
 import { loginUser } from "./CurrentUserActions"
 
-const url = "http://the-social-pup-backend.herokuapp.com/users"
+const url = "https://the-social-pup-backend.herokuapp.com/users"
 
 const setUsers = (users) => ({type: "GOT_USERS", payload: users})
 
